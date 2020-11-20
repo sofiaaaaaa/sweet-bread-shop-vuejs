@@ -1,0 +1,91 @@
+@import './_fonts';
+@import './_tailwind';
+@import './utils';
+@import './animation';
+@import './_form-inputs';
+@import './dev';
+@import './performance';
+
+html {
+  font-display: block;
+  @apply .font-sans .font-light .text-gray-400;
+  // font-family: 'Roboto';
+  height: 100%;
+
+  background-color: #292f35;
+  background-image: radial-gradient(
+    farthest-corner at top left,
+    #292f35 46%,
+    #161a1c
+  );
+  background-repeat: no-repeat;
+  color: darken(#fff, 1);
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(#fff, .5) transparent;
+
+
+  &::-webkit-scrollbar {
+    background: rgba(27, 31, 34, 0);
+    width: 5px;
+    height: 5px;
+
+    &-thumb {
+      background: rgba(247, 250, 252, 0.19);
+      transition: all 500ms ease;
+      border-radius: 5px;
+    }
+  }
+  
+  
+
+  &:hover {
+    &::-webkit-scrollbar {
+      // background: #e2e8f0;
+      // width: 10px;
+
+      &-thumb {
+        transition: all 500ms ease;
+        background: rgba(247, 250, 252, 0.29);
+      }
+    }
+  }
+}
+
+h1 {
+  @apply text-6xl font-title;
+}
+h2 {
+  @apply text-5xl font-title;
+}
+h3 {
+  @apply text-4xl font-title;
+}
+h4 {
+  @apply text-3xl  font-title;
+}
+h5 {
+  @apply text-2xl  font-title;
+}
+
+a {
+  @apply text-blue-600;
+
+  &:hover {
+    @apply .underline;
+  }
+}
+
+.component-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}

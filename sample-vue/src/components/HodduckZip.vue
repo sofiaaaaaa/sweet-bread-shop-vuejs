@@ -1,31 +1,11 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
-    <d3-metric
-      :data="metricValue"
-      :options="options"
-      :margin="margin"
-      width="100%"
-      height="400px">
-  </d3-metric>
-
-  <d3-circle
-    :data="circleValue"
-    :options="options"
-    :margin="margin"
-    width="100%"
-    height="400px">
-</d3-circle>
-
-<d3-pie
-    :data="pieValue"
-    :options="options"
-    :margin="margin"
-    width="100%"
-    height="400px">
-</d3-pie>
+    <div class="flex-container">
+      
 
 
+    </div>
   </div>
 </template>
 
@@ -64,5 +44,19 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.flex-container {
+  display: flex;
+  /* background-color: DodgerBlue; */
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width: 150px;
+  height: 150px;
 }
 </style>
