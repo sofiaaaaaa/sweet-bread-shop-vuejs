@@ -22,6 +22,7 @@
 
 <script>
 import *  as d3 from 'd3'
+import pop from './populations.json'
 
 export default {
   name: 'D3Sample',
@@ -35,7 +36,8 @@ export default {
         x: 200,
         y: 400
       }
-    ]
+    ],
+    pop: pop
   }),
   methods: {
     /** @param {MouseEvent} ev */
@@ -49,6 +51,7 @@ export default {
     }
   },
   created() {
+    console.log(pop, "aaa")
   },
   computed: {
    lineGenerator() {
